@@ -2,8 +2,8 @@ import {View} from 'react-native';
 import React from 'react';
 
 type Props = {
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
 };
 
 const Gap = (props: Props) => {

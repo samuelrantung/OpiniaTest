@@ -1,6 +1,6 @@
-import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {Image, Pressable, ScrollView, StyleSheet, View} from 'react-native';
 import React from 'react';
-import {Gap, TopBar} from '../../components';
+import {BottomBar, Gap, Post, TopBar} from '../../components';
 import {IcCamera, IcFloating, IMGProfileBanner, theme} from '../../assets';
 import {
   CompleteProfile,
@@ -14,23 +14,29 @@ type Props = {};
 const Profile = (props: Props) => {
   return (
     <View style={styles.container}>
+      <TopBar title="Profil" />
+      <ScrollView>
+        <View>
+          <Image style={styles.imageBanner} source={IMGProfileBanner} />
+          <Pressable style={styles.pictureButton}>
+            <IcCamera />
+          </Pressable>
+          <ProfileHeader />
+          <Gap height={17} />
+          <PointSection />
+          <Gap height={15} />
+          <CompleteProfile />
+          <Gap height={12} />
+          <MenuSection />
+          <Gap height={20} />
+          <Post />
+        </View>
+        <Gap height={24} />
+      </ScrollView>
+      <BottomBar />
       <Pressable style={styles.floatingAction}>
         <IcFloating />
       </Pressable>
-      <TopBar title="Profil" />
-      <View>
-        <Image style={styles.imageBanner} source={IMGProfileBanner} />
-        <Pressable style={styles.pictureButton}>
-          <IcCamera />
-        </Pressable>
-        <ProfileHeader />
-        <Gap height={17} />
-        <PointSection />
-        <Gap height={15} />
-        <CompleteProfile />
-        <Gap height={12} />
-        <MenuSection />
-      </View>
     </View>
   );
 };
