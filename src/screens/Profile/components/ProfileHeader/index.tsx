@@ -2,10 +2,23 @@ import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {theme, IMGProfilePicture, IcStar} from '../../../../assets';
 import {Gap} from '../../../../components';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../../../utils';
 
 type Props = {};
 
 const ProfileHeader = (props: Props) => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  const handleFollowing = () => {
+    navigation.navigate('Following');
+  };
+
+  const handleFollowers = () => {
+    navigation.navigate('Followers');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.innerContainer}>
@@ -37,14 +50,18 @@ const ProfileHeader = (props: Props) => {
             <Text style={styles.sectionTitle}>Postingan</Text>
             <Text style={styles.sectionValue}>26</Text>
           </View>
-          <View style={[styles.bottomSectionContainer, styles.inlineBorder]}>
+          <Pressable
+            onPress={() => handleFollowing()}
+            style={[styles.bottomSectionContainer, styles.inlineBorder]}>
             <Text style={styles.sectionTitle}>Mengikuti</Text>
             <Text style={styles.sectionValue}>30</Text>
-          </View>
-          <View style={styles.bottomSectionContainer}>
+          </Pressable>
+          <Pressable
+            onPress={() => handleFollowers()}
+            style={styles.bottomSectionContainer}>
             <Text style={styles.sectionTitle}>Pengikut</Text>
             <Text style={styles.sectionValue}>29</Text>
-          </View>
+          </Pressable>
         </View>
       </View>
     </View>

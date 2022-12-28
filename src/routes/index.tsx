@@ -1,21 +1,18 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {NavigationContainer} from '@react-navigation/native';
-import {Profile} from '../screens';
-import {IcArrowLeft} from '../assets/icons';
+import {Followers, Following, Profile, ProfileDetail} from '../screens';
 
-type Props = {};
-
-const Routes = (props: Props) => {
+const Routes = () => {
   const Stack = createNativeStackNavigator();
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="ProfileDetail" component={ProfileDetail} />
+      <Stack.Screen name="Followers" component={Followers} />
+      <Stack.Screen name="Following" component={Following} />
     </Stack.Navigator>
   );
 };
 
 export default Routes;
-
-const styles = StyleSheet.create({});
