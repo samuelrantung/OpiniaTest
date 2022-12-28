@@ -8,6 +8,7 @@ const palette = {
 export const theme = {
   colors: {
     white: palette.white,
+    black: palette.black,
     primary: palette.green,
     fontLight: palette.white,
     fontDark: palette.black,

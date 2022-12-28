@@ -5,6 +5,12 @@ import IcCamera from './ic-camera.svg';
 import IcStar from './ic-star.svg';
 import IcPointBadge from './ic-point-badge.svg';
 import IcChevroletRight from './ic-chevrolet-right.svg';
+import IcMenuAll from './ic-menu-all.svg';
+import IcMenuIdea from './ic-menu-idea.svg';
+import IcMenuArtikel from './ic-menu-artikel.svg';
+import IcMenuPoling from './ic-menu-poling.svg';
+import IcMenuPetisi from './ic-menu-petisi.svg';
+import IcFloating from './ic-floating-icon.svg';
 
 export {
   IcArrowLeft,
@@ -14,4 +20,10 @@ export {
   IcStar,
   IcPointBadge,
   IcChevroletRight,
+  IcMenuAll,
+  IcMenuIdea,
+  IcMenuArtikel,
+  IcMenuPoling,
+  IcMenuPetisi,
+  IcFloating,
 };
