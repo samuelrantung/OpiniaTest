@@ -46,7 +46,10 @@ const MenuSection = (props: Props) => {
     <View style={styles.container}>
       {menuList.map((item, i) => (
         <Pressable
-          style={styles.itemContainer}
+          style={[
+            styles.itemContainer,
+            i === choosen && styles.activeItemContainer,
+          ]}
           key={i}
           onPress={() => handleMenuPress(i)}>
           <View
@@ -80,6 +83,9 @@ const styles = StyleSheet.create({
     padding: 4,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  activeItemContainer: {
+    backgroundColor: '#F5F5F5',
   },
   iconContainer: {
     width: 45,

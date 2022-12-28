@@ -1,5 +1,5 @@
 import {Image, Pressable, ScrollView, StyleSheet, View} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {BottomBar, Gap, Post, TopBar} from '../../components';
 import {IcCamera, IcFloating, IMGProfileBanner, theme} from '../../assets';
 import {
@@ -8,17 +8,26 @@ import {
   PointSection,
   ProfileHeader,
 } from './components';
+import CameraModal from '../../components/molecules/CameraModal';
 
 type Props = {};
 
 const Profile = (props: Props) => {
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const handleOpenCamera = () => {
+    setModalVisible(!modalVisible);
+  };
+
   return (
     <View style={styles.container}>
       <TopBar title="Profil" />
       <ScrollView>
         <View>
           <Image style={styles.imageBanner} source={IMGProfileBanner} />
-          <Pressable style={styles.pictureButton}>
+          <Pressable
+            style={styles.pictureButton}
+            onPress={() => handleOpenCamera()}>
             <IcCamera />
           </Pressable>
           <ProfileHeader />
@@ -37,6 +46,7 @@ const Profile = (props: Props) => {
       <Pressable style={styles.floatingAction}>
         <IcFloating />
       </Pressable>
+      <CameraModal state={modalVisible} setState={setModalVisible} />
     </View>
   );
 };

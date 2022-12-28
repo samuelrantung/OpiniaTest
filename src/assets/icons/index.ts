@@ -27,6 +27,8 @@ import IcPendidikan from './ic-pendidikan.svg';
 import IcTempatTinggal from './ic-tempat-tinggal.svg';
 import IcHobi from './ic-hobi.svg';
 import IcWebsite from './ic-website.svg';
+import IcKamera from './ic-kamera.svg';
+import IcGallery from './ic-gallery.svg';
 
 export {
   IcArrowLeft,
@@ -58,4 +60,6 @@ export {
   IcTempatTinggal,
   IcHobi,
   IcWebsite,
+  IcKamera,
+  IcGallery,
 };
