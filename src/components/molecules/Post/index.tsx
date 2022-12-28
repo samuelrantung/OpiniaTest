@@ -79,6 +79,7 @@ export default Post;
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
+    marginBottom: 24,
   },
 
   topContainer: {

@@ -39,8 +39,9 @@ const Profile = (props: Props) => {
           <MenuSection />
           <Gap height={20} />
           <Post />
+          <Post />
+          <Post />
         </View>
-        <Gap height={24} />
       </ScrollView>
       <BottomBar />
       <Pressable style={styles.floatingAction}>

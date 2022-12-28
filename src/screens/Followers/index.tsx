@@ -7,7 +7,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {Gap, TopBar} from '../../components';
 import {IMGBackground, IMGProfilePicture, theme} from '../../assets';
 
@@ -16,48 +16,59 @@ type Props = {};
 const dummy = [
   {
     name: 'Julia Maretta',
-    following: false,
+    following: true,
   },
   {
     name: 'Julia Maretta',
-    following: false,
+    following: true,
   },
   {
     name: 'Julia Maretta',
-    following: false,
+    following: true,
   },
   {
     name: 'Julia Maretta',
-    following: false,
+    following: true,
   },
   {
     name: 'Julia Maretta',
-    following: false,
+    following: true,
   },
   {
     name: 'Julia Maretta',
-    following: false,
+    following: true,
   },
   {
     name: 'Julia Maretta',
-    following: false,
+    following: true,
   },
   {
     name: 'Julia Maretta',
-    following: false,
+    following: true,
   },
   {
     name: 'Julia Maretta',
-    following: false,
+    following: true,
   },
 ];
 
 const Followers = (props: Props) => {
+  const [data, setData] = useState(dummy);
+
+  const handleFollowButton = (index: number) => {
+    const newData = [...data];
+    const temp = data[index];
+
+    temp.following = !data[index].following;
+    newData[index] = temp;
+
+    setData(newData);
+  };
   return (
     <ImageBackground style={styles.container} source={IMGBackground}>
       <TopBar title="Pengikut" type="simple" />
       <FlatList
-        data={dummy}
+        data={data}
         contentContainerStyle={styles.contentContainer}
         renderItem={({item, index}) => (
           <View style={styles.itemContainer} key={index}>
@@ -66,8 +77,12 @@ const Followers = (props: Props) => {
             </View>
             <Gap width={17} />
             <Text style={styles.username}>{item.name}</Text>
-            <Pressable style={styles.button}>
-              <Text style={styles.buttonLabel}>Mengikuti</Text>
+            <Pressable
+              style={styles.button}
+              onPress={() => handleFollowButton(index)}>
+              <Text style={styles.buttonLabel}>
+                {item.following ? 'Mengikuti' : 'Ikuti'}
+              </Text>
             </Pressable>
           </View>
         )}
