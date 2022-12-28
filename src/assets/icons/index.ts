@@ -1,4 +1,5 @@
 import IcArrowLeft from './ic-arrow-left.svg';
+import IcArrowLeftBlack from './ic-arrow-left-black.svg';
 import IcShare from './ic-share.svg';
 import IcUser from './ic-user.svg';
 import IcCamera from './ic-camera.svg';
@@ -21,9 +22,15 @@ import IcHome from './ic-home.svg';
 import IcSearch from './ic-search.svg';
 import IcGroups from './ic-groups.svg';
 import IcConversations from './ic-conversations.svg';
+import IcPekerjaan from './ic-pekerjaan.svg';
+import IcPendidikan from './ic-pendidikan.svg';
+import IcTempatTinggal from './ic-tempat-tinggal.svg';
+import IcHobi from './ic-hobi.svg';
+import IcWebsite from './ic-website.svg';
 
 export {
   IcArrowLeft,
+  IcArrowLeftBlack,
   IcShare,
   IcUser,
   IcCamera,
@@ -46,4 +53,9 @@ export {
   IcSearch,
   IcGroups,
   IcConversations,
+  IcPekerjaan,
+  IcPendidikan,
+  IcTempatTinggal,
+  IcHobi,
+  IcWebsite,
 };
