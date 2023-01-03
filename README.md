@@ -8,8 +8,9 @@ Figma design https://www.figma.com/file/09OVnaAU1XduLqYcce4GKG/Mobile-Test-(Copy
 
 https://github.com/samuelrantung/OpiniaTest/blob/main/assets/screenshot-1.png
 
-![alt text](https://github.com/samuelrantung/OpiniaTest/blob/main/assets/screenshot-1.png?raw=true)
 <img src="https://your-image-url.type](https://github.com/samuelrantung/OpiniaTest/blob/main/assets/screenshot-1.png?raw=true" width="100">
+
+![alt text](https://github.com/samuelrantung/OpiniaTest/blob/main/assets/screenshot-1.png?raw=true)
 ![alt text](https://github.com/samuelrantung/OpiniaTest/blob/main/assets/screenshot-2.png?raw=true)
 ![alt text](https://github.com/samuelrantung/OpiniaTest/blob/main/assets/screenshot-3.png?raw=true)
 ![alt text](https://github.com/samuelrantung/OpiniaTest/blob/main/assets/screenshot-4.png?raw=true)
